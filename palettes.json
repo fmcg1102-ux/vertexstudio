@@ -31,42 +31,28 @@
     "nike_running": {
       "name":     "Nike Running",
       "industry": "Running Footwear & Performance",
-      "_accent_note": "Nike performance orange — used across Vaporfly/Alphafly campaigns",
-      "accent":   "#FF4500",
+      "_accent_note": "Client always renders in burnt orange. Competitors in descending grey.",
+      "accent":   "#FF8C00",
       "competitors": {
-        "_notes": {
-          "hoka":        "Hoka's electric sky blue — contrasts cleanly against Nike orange",
-          "new_balance": "NB's signature red from their logo wordmark",
-          "asics":       "Asics royal blue — their primary stripe/logo colour",
-          "brooks":      "Brooks Run Happy cyan-blue — their main brand hue",
-          "adidas":      "Adidas Impact Yellow — their performance/energy line"
-        },
-        "hoka":        "#00AEEF",
-        "new_balance": "#CF0A2C",
-        "asics":       "#2563EB",
-        "brooks":      "#0095D9",
-        "adidas":      "#EAFF00"
+        "hoka":        "#FFFFFF",
+        "new_balance": "#CCCCCC",
+        "asics":       "#999999",
+        "brooks":      "#666666",
+        "adidas":      "#444444"
       }
     },
 
     "mous": {
       "name":     "Mous",
       "industry": "Phone Cases & Accessories",
-      "_accent_note": "Mous warm premium gold — reflects their premium/leather product aesthetic",
-      "accent":   "#C9A84C",
+      "_accent_note": "Client always renders in burnt orange. Competitors in descending grey.",
+      "accent":   "#FF8C00",
       "competitors": {
-        "_notes": {
-          "casetify":    "Casetify hot pink/magenta — their most recognisable brand signal",
-          "peak_design": "Peak Design forest green — matches their outdoors/adventure positioning",
-          "spigen":      "Spigen tech blue — clean and corporate, matches their product feel",
-          "otterbox":    "OtterBox orange — their actual brand colour, used across all marketing",
-          "nomad":       "Nomad saddle brown — directly mirrors their leather goods palette"
-        },
-        "casetify":    "#E5156B",
-        "peak_design": "#4A9B6F",
-        "spigen":      "#1E6FD9",
-        "otterbox":    "#FF6700",
-        "nomad":       "#A0785A"
+        "casetify":    "#FFFFFF",
+        "peak_design": "#CCCCCC",
+        "spigen":      "#999999",
+        "otterbox":    "#666666",
+        "nomad":       "#444444"
       }
     }
 
