@@ -1,0 +1,58 @@
+{
+  "_comment": "Vertex Studio — Client Colour Palettes. Add a new entry per product/client.",
+
+  "platforms": {
+    "_comment": "Fixed colours for AI platforms — shared across all clients.",
+    "claude":     "#cc785c",
+    "chatgpt":    "#10a37f",
+    "gemini":     "#4285f4",
+    "perplexity": "#7c3aed",
+    "copilot":    "#0078d4"
+  },
+
+  "ui": {
+    "_comment": "Dashboard chrome — background, text, borders. Shared across all clients.",
+    "bg_base":        "#0f0f0f",
+    "bg_surface":     "#161616",
+    "bg_card":        "#1a1a1a",
+    "bg_elevated":    "#222222",
+    "bg_hover":       "#2a2a2a",
+    "border_subtle":  "#2a2a2a",
+    "border_default": "#333333",
+    "text_primary":   "#ffffff",
+    "text_secondary": "#a0a0a0",
+    "text_muted":     "#666666",
+    "positive":       "#4ade80",
+    "negative":       "#f87171"
+  },
+
+  "clients": {
+
+    "nike_running": {
+      "name":     "Nike Running",
+      "industry": "Running Footwear & Performance",
+      "accent":   "#CC5500",
+      "competitors": {
+        "hoka":        "#a78bfa",
+        "new_balance": "#60a5fa",
+        "asics":       "#4ade80",
+        "brooks":      "#94a3b8",
+        "adidas":      "#f472b6"
+      }
+    },
+
+    "mous": {
+      "name":     "Mous",
+      "industry": "Phone Cases & Accessories",
+      "accent":   "#CC5500",
+      "competitors": {
+        "casetify":    "#a78bfa",
+        "peak_design": "#60a5fa",
+        "spigen":      "#4ade80",
+        "otterbox":    "#f472b6",
+        "nomad":       "#94a3b8"
+      }
+    }
+
+  }
+}

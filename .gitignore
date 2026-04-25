@@ -1,0 +1,12 @@
+node_modules/
+data/
+reports/
+.env
+*.log
+.DS_Store
+extract_nike_data.js
+update_dashboard.js
+test-report.js
+restart-server.sh
+server/start.js
+server/test-api.js

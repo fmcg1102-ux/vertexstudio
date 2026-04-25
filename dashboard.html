@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertex Studio — AI Visibility Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────── -->
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__left">
+        <span class="header__logo">Vertex<span class="header__logo-accent">Studio</span></span>
+        <div class="header__divider"></div>
+        <div class="header__client">
+          <span class="header__client-name" id="clientName">Nike Running</span>
+          <span class="header__client-sub">AI Visibility Dashboard</span>
+        </div>
+      </div>
+      <div class="header__right">
+        <span class="header__date" id="lastUpdated"></span>
+        <span class="badge badge--accent" style="gap:6px;">
+          <span class="live-dot"></span> Live
+        </span>
+        <button class="btn btn--ghost btn--sm" id="logoutBtn">Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Main content ───────────────────────────────────────── -->
+  <main class="main">
+
+    <!-- Row 1: KPI + Platforms -->
+    <section class="kpi-section">
+
+      <!-- Overall score -->
+      <div class="card kpi-card">
+        <p class="section-label">Overall AI Visibility</p>
+        <div class="kpi-score">
+          <span class="kpi-number" id="overallScore">0</span>
+          <span class="kpi-unit">%</span>
+        </div>
+        <div class="kpi-meta">
+          <span class="badge badge--positive" id="scoreDelta"></span>
+          <span class="kpi-context" id="scoreContext"></span>
+        </div>
+      </div>
+
+      <!-- Platform cards -->
+      <div class="platform-grid" id="platformGrid"></div>
+
+    </section>
+
+    <!-- Row 2: Charts -->
+    <section class="charts-row">
+
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Competitor Comparison</h2>
+          <p class="card-subtitle">Average AI visibility score by platform</p>
+        </div>
+        <div class="chart-container">
+          <canvas id="competitorChart"></canvas>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Visibility Trend</h2>
+          <p class="card-subtitle">12-month rolling score — Nike Running</p>
+        </div>
+        <div class="chart-container">
+          <canvas id="trendChart"></canvas>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Row 3: Queries + Missed Opportunities -->
+    <section class="data-row">
+
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Top Ranked Queries</h2>
+          <p class="card-subtitle">Queries where Nike appears in AI-generated answers</p>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Query</th>
+              <th>Platform</th>
+              <th>Position</th>
+              <th>Category</th>
+              <th>Trend</th>
+            </tr>
+          </thead>
+          <tbody id="topQueriesBody"></tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Missed Opportunities</h2>
+          <p class="card-subtitle">High-value queries — competitors rank, Nike doesn't</p>
+        </div>
+        <ul class="missed-list" id="missedList"></ul>
+      </div>
+
+    </section>
+
+    <!-- Row 4: Mentions feed -->
+    <section>
+      <div class="card">
+        <div class="card-header" style="display:flex; justify-content:space-between; align-items:flex-start;">
+          <div>
+            <h2 class="card-title">Recent AI Mentions</h2>
+            <p class="card-subtitle">Latest times Nike appeared in AI-generated answers</p>
+          </div>
+          <div class="feed-live-wrap">
+            <span class="live-dot"></span>
+            <span style="font-size:var(--text-xs);color:var(--text-muted);">Live feed</span>
+          </div>
+        </div>
+        <div class="feed" id="mentionsFeed"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
