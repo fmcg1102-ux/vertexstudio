@@ -118,12 +118,12 @@ function getDashboardData() {
     competitorChart: {
       labels: ['Claude'],
       datasets: [
-        { label: 'Nike', data: [overallScore], color: '#CC5500' },
-        { label: 'Asics', data: [Math.min((latest.latest.competitors.asics || 0) / 2, 100)], color: '#4ade80' },
-        { label: 'Hoka', data: [Math.min((latest.latest.competitors.hoka || 0) / 2, 100)], color: '#a78bfa' },
-        { label: 'New Balance', data: [Math.min((latest.latest.competitors.newbalance || 0) / 2, 100)], color: '#60a5fa' },
-        { label: 'Brooks', data: [Math.min((latest.latest.competitors.brooks || 0) / 2, 100)], color: '#94a3b8' },
-        { label: 'Adidas', data: [Math.min((latest.latest.competitors.adidas || 0) / 2, 100)], color: '#f472b6' }
+        { label: 'Nike',        data: [overallScore], color: '#FF4500' },
+        { label: 'Asics',       data: [Math.min((latest.latest.competitors.asics || 0) / 2, 100)], color: '#2563EB' },
+        { label: 'Hoka',        data: [Math.min((latest.latest.competitors.hoka || 0) / 2, 100)], color: '#00AEEF' },
+        { label: 'New Balance', data: [Math.min((latest.latest.competitors.newbalance || 0) / 2, 100)], color: '#CF0A2C' },
+        { label: 'Brooks',      data: [Math.min((latest.latest.competitors.brooks || 0) / 2, 100)], color: '#0095D9' },
+        { label: 'Adidas',      data: [Math.min((latest.latest.competitors.adidas || 0) / 2, 100)], color: '#EAFF00' }
       ]
     },
     trend: {

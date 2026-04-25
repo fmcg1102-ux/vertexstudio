@@ -26,35 +26,35 @@ window.DASHBOARD_DATA = {
         "data": [
           91
         ],
-        "color": "#CC5500"
+        "color": "#FF4500"
       },
       {
         "label": "Asics",
         "data": [
           82
         ],
-        "color": "#4ade80"
+        "color": "#2563EB"
       },
       {
         "label": "Hoka",
         "data": [
           29
         ],
-        "color": "#a78bfa"
+        "color": "#00AEEF"
       },
       {
         "label": "New Balance",
         "data": [
           44
         ],
-        "color": "#60a5fa"
+        "color": "#CF0A2C"
       },
       {
         "label": "Brooks",
         "data": [
           38
         ],
-        "color": "#94a3b8"
+        "color": "#0095D9"
       }
     ]
   },
