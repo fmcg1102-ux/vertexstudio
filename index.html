@@ -117,14 +117,11 @@
           <canvas id="competitorChart"></canvas>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">Visibility Trend</h2>
-          <p class="card-subtitle">12-month rolling score — Nike Running</p>
-        </div>
-        <div class="chart-container">
-          <canvas id="trendChart"></canvas>
-        </div>
+      <div class="card" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
+        <p class="section-label" style="margin-bottom:12px;">Today's Visibility Score</p>
+        <div style="font-size:96px;font-weight:700;color:var(--accent);line-height:1;" id="todayScore">0%</div>
+        <p style="margin-top:16px;font-size:var(--text-sm);color:var(--text-secondary);" id="todayContext"></p>
+        <p style="margin-top:8px;font-size:var(--text-xs);color:var(--text-muted);" id="todayDate"></p>
       </div>
     </section>
 
@@ -295,7 +292,13 @@ async function initDashboard() {
 
   // Charts
   Charts.renderCompetitorChart('competitorChart', D.competitorChart);
-  Charts.renderTrendChart('trendChart', D.trend);
+
+  // Today's visibility score
+  document.getElementById('todayScore').textContent = D.client.overallScore + '%';
+  document.getElementById('todayContext').textContent =
+    D.client.overallScore + '% of tracked queries returned a Nike mention';
+  document.getElementById('todayDate').textContent =
+    'Based on ' + D.client.totalQueries + ' queries run on ' + D.client.lastCollected;
 
   // Top queries table
   const tbody = document.getElementById('topQueriesBody');
