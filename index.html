@@ -227,7 +227,7 @@ document.getElementById('downloadReportBtn').addEventListener('click', async fun
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `mous-visibility-${new Date().toISOString().split('T')[0]}.pdf`;
+    a.download = `nike-visibility-${new Date().toISOString().split('T')[0]}.pdf`;
     document.body.appendChild(a);
     a.click();
     window.URL.revokeObjectURL(url);

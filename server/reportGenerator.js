@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const db = require('./database');
 
-const ACCENT_COLOR = '#CC5500';
+const ACCENT_COLOR = '#FF8C00';
 const BG_PRIMARY = '#ffffff';
 const BG_LIGHT = '#f9f9f9';
 const TEXT_PRIMARY = '#000000';
