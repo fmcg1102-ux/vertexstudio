@@ -68,17 +68,18 @@ function getDashboardData() {
     trend: 'stable'
   }));
 
-  // Build missed opportunities (queries where Nike didn't appear but competitors did)
-  const missedOpportunities = latest.latest.topQueries
-    .filter(q => !q.appeared && Object.keys(q.allMentions).length > 0)
-    .map(q => {
-      const competitors = Object.entries(q.allMentions);
-      const topComp = competitors.sort((a, b) => b[1] - a[1])[0];
+  // Build missed opportunities from raw run results (not topQueries — those only contain appearances)
+  const rawDb = db.readDatabase();
+  const lastRun = rawDb.runs[rawDb.runs.length - 1];
+  const missedOpportunities = (lastRun ? lastRun.results : [])
+    .filter(r => !r.appeared && Object.keys(r.allMentions || {}).length > 0)
+    .map(r => {
+      const topComp = Object.entries(r.allMentions).sort((a, b) => b[1] - a[1])[0];
       return {
-        query: q.query,
+        query: r.query,
         topCompetitor: capitalize(topComp[0]),
-        competitorScore: Math.round(Math.random() * 40 + 50), // Fake: 50-90
-        volume: Math.random() > 0.5 ? 'High' : 'Medium'
+        competitorMentions: topComp[1],
+        volume: detectVolume(r.query)
       };
     })
     .slice(0, 6);
@@ -150,6 +151,13 @@ function detectCategory(query) {
 
 function capitalize(str) {
   return str.split(/(?=[A-Z])/).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+function detectVolume(query) {
+  const q = query.toLowerCase();
+  if (q.includes('flat feet') || q.includes('wide feet') || q.includes('affordable') || q.includes('budget')) return 'High';
+  if (q.includes('overpronator') || q.includes('narrow') || q.includes('cross country')) return 'Medium';
+  return 'High';
 }
 
 function formatTime(isoString) {

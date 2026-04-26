@@ -324,7 +324,7 @@ async function initDashboard() {
         <p class="missed-item__competitor">Leading: ${m.topCompetitor}</p>
       </div>
       <div class="missed-item__right">
-        <span class="missed-item__gap">${m.competitorScore}%</span>
+        <span class="missed-item__gap">${m.competitorMentions} mention${m.competitorMentions !== 1 ? 's' : ''}</span>
         <span class="badge ${m.volume==='High'?'badge--accent':'badge--neutral'}">${m.volume}</span>
       </div>`;
     missedList.appendChild(li);

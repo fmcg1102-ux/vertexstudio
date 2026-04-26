@@ -148,34 +148,28 @@ window.DASHBOARD_DATA = {
   ],
   "missedOpportunities": [
     {
-      "query": "Best asics running shoes",
-      "topCompetitor": "Asics",
-      "competitorScore": 85,
-      "volume": "High"
-    },
-    {
-      "query": "Best newbalance running shoes",
-      "topCompetitor": "Newbalance",
-      "competitorScore": 85,
-      "volume": "High"
-    },
-    {
-      "query": "Best adidas running shoes",
-      "topCompetitor": "Adidas",
-      "competitorScore": 85,
-      "volume": "High"
-    },
-    {
-      "query": "Best brooks running shoes",
+      "query": "Best running shoes for flat feet",
       "topCompetitor": "Brooks",
-      "competitorScore": 85,
+      "competitorMentions": 3,
       "volume": "High"
     },
     {
-      "query": "Best hoka running shoes",
-      "topCompetitor": "Hoka",
-      "competitorScore": 85,
+      "query": "Running shoes for overpronators",
+      "topCompetitor": "Brooks",
+      "competitorMentions": 3,
       "volume": "Medium"
+    },
+    {
+      "query": "Best running shoes for wide feet",
+      "topCompetitor": "Brooks",
+      "competitorMentions": 3,
+      "volume": "High"
+    },
+    {
+      "query": "Best affordable marathon shoes",
+      "topCompetitor": "Asics",
+      "competitorMentions": 1,
+      "volume": "High"
     }
   ],
   "mentions": [
